@@ -9,11 +9,6 @@ body {
   font-family: "Ace attorney", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 #TextBox {
   height:100px;
   background-color: black;
@@ -27,11 +22,26 @@ code {
 
 #ViewWindow {
   flex: 1;
+}
+#TitleMenu{
+  flex: 1;
   background-image: url('./img/backgrounds/title_bg.png');
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#GameScreen {
+#GameContainer {
   height:600px;
   display: flex;
   flex-direction: column;
+}
+
+/* UI ELEMENTS */
+.choice-button{
+  color: white;
+  background-color: brown;
+  display: block;
+  margin: 10px;
+  font-size: 20px;
 }

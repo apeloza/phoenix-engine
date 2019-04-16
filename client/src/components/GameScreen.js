@@ -7,14 +7,16 @@ class GameScreen extends Component {
 
   constructor(){
     super();
-
+    this.state = {
+      scriptLine: 0
+    };
   }
 
 render(){
   return(
     <div id="GameScreen">
-      <ViewWindow/>
-      <TextBox/>
+      <ViewWindow script={this.props.script} scriptLine={this.props.scriptLine}/>
+      <TextBox script={this.props.script} scriptLine={this.state.scriptLine}/>
     </div>
   )
 }

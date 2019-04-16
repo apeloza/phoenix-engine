@@ -10,7 +10,7 @@ class TextBox extends Component {
 
 render(){
   return(
-    <div id="TextBox">This is a text box.</div>
+    <div id="TextBox">{this.props.script[this.props.scriptLine].text}</div>
   )
 }
 }
