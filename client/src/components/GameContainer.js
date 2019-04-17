@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import GameScreen from './GameScreen';
 import TitleMenu from './TitleMenu';
+import Footer from './Footer';
 
 class GameContainer extends Component {
 
@@ -23,14 +24,15 @@ render(){
     return(
       <div id="GameContainer">
         <TitleMenu
-        loadScript={this.loadScript}
-        />
+        loadScript={this.loadScript}/>
+        <Footer/>
       </div>
     )
   } else {
     return(
         <div id="GameContainer">
           <GameScreen script={this.state.script}/>
+          <Footer/>
         </div>
       )
   }

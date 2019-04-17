@@ -5,7 +5,10 @@ class TextBox extends Component {
 
   constructor(){
     super();
+  }
 
+  componentDidMount(){
+    
   }
 
 render(){

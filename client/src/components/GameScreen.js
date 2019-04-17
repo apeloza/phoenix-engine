@@ -15,7 +15,7 @@ class GameScreen extends Component {
 render(){
   return(
     <div id="GameScreen">
-      <ViewWindow script={this.props.script} scriptLine={this.props.scriptLine}/>
+      <ViewWindow script={this.props.script} scriptLine={this.state.scriptLine}/>
       <TextBox script={this.props.script} scriptLine={this.state.scriptLine}/>
     </div>
   )

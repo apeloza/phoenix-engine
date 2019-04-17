@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CaseMenu from './CaseMenu';
+import Footer from './Footer';
 
 class TitleMenu extends Component {
 
@@ -22,22 +23,21 @@ render(){
   //TODO: New Game vs. Load options
   if(this.state.inCaseMenu === false){
     return(
-      <div id="TitleMenu">
-        <div className="choice-menu">
-          <button onClick={this.toggleCaseMenu} className="choice-button">New Game</button>
-          <button className="choice-button">Load Game</button>
+        <div id="TitleMenu">
+          <div className="choice-menu">
+            <button onClick={this.toggleCaseMenu} className="choice-button">New Game</button>
+            <button className="choice-button">Load Game</button>
+          </div>
         </div>
-      </div>
     )
   } else {
     return(
-      <div id="TitleMenu">
-      <button onClick={this.toggleCaseMenu} className="choice-button">Go Back</button>
-        <CaseMenu
-        loadScript={this.props.loadScript}/>
-      </div>
-    )
-
+        <div id="TitleMenu">
+        <button onClick={this.toggleCaseMenu} className="choice-button">Go Back</button>
+          <CaseMenu
+          loadScript={this.props.loadScript}/>
+        </div>
+         )
   }
 
 }

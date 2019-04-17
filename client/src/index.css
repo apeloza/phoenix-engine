@@ -37,6 +37,19 @@ body {
   flex-direction: column;
 }
 
+#GameScreen{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#Footer{
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding: 10px;
+}
+
 /* UI ELEMENTS */
 .choice-button{
   color: white;
