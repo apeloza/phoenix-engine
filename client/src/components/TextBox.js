@@ -7,7 +7,6 @@ class TextBox extends Component {
     super();
 
     this.addToCurrentText = this.addToCurrentText.bind(this);
-    this.checkText = this.checkText.bind(this);
 
     this.state = {
       currentText: '',
@@ -19,20 +18,18 @@ class TextBox extends Component {
 
   componentDidMount(){
     const currentText = this.props.script[this.props.scriptLine].text;
-    var textLoop = setInterval(() => this.addToCurrentText(currentText[this.state.currentCharacter]), 150);
+    var textLoop = setTimeout(() => this.addToCurrentText(currentText[this.state.currentCharacter]), 150);
   }
 
 //auto-firing function that makes the text appear to 'type'
   addToCurrentText(newCharacter){
+    const currentText = this.props.script[this.props.scriptLine].text;
     console.log(this.state.currentCharacter);
     this.setState({currentText: this.state.currentText + newCharacter});
     this.setState({currentCharacter: this.state.currentCharacter + 1});
-    // this.checkText();
-  }
-
-//clears interval as necessary
-  checkText(){
-    if(this.props.script[this.props.scriptLone].text.length <= this.state.currentCharacter) clearInterval(textLoop);
+    if(this.props.script[this.props.scriptLine].text.length > this.state.currentCharacter){
+      var textLoop = setTimeout(() => this.addToCurrentText(currentText[this.state.currentCharacter]), 150);
+    }
   }
 
 render(){
